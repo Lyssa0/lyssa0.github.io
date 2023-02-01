@@ -17,9 +17,10 @@ nav {
     background: rgb(211, 237, 237);
    margin: 0 auto;
    margin-bottom: 20px;
+   margin-top: 10px;
     display: flex;
     padding: 10px;
-    border-style: outset;
+    border-style: solid;
     border-radius: 58px;
 }
 h1 {
@@ -56,6 +57,7 @@ main {
 .content {
     flex: 1;
     padding: 15px;
+    text-align: center;
 }
 
 /* portfolio styles */
@@ -66,4 +68,9 @@ main {
 }
 h2, h3 {
     margin: 0px;
+}
+#capy {
+    border: 4px lavenderblush;
+    border-style: solid;
+
 }
