@@ -37,7 +37,7 @@ h1 {
     display: inline-block;
     padding: 0 10px;
 }
-a {
+a {+
     text-decoration: none;
     color: #fff;
 }
@@ -64,7 +64,7 @@ main {
 #interests {
     border: 4px lavenderblush;
     border-style: solid;
-    padding: 8px;
+    padding: 10px;
 }
 h2, h3 {
     margin: 0px;
@@ -73,4 +73,14 @@ h2, h3 {
     border: 4px lavenderblush;
     border-style: solid;
 
+}
+#allContent {
+    padding-left: 100px;
+}
+#stuff {
+    border: 4px lavenderblush;
+    border-style: solid;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
