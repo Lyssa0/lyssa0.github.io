@@ -114,3 +114,66 @@ h2, h3 {
     text-decoration: none;
     color: rgba(128, 135, 179, 0.865);
 }
+/*Responsive WebDesign*/
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+    main {
+      height: 100ch;
+      zoom: 1.5;
+      display: grid;
+    }
+  
+    h1 {
+      font-size: 44px;
+    }
+  
+    h2 {
+      font-size: 42px;
+    }
+  
+    h3 {
+      font-size: 36px;
+    }
+  
+    #all-contents {
+      height: 190ch;
+      margin: none;
+
+    }
+    #allContent{
+        margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 0px;
+    }
+  
+    a {
+      font-size: 40px;
+    }
+  
+    .sidebar {
+      margin-right: 0px;
+      margin-left: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #capy {
+      width: 50%;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+  
+    p,
+    li {
+      font-size: 24px;
+    }
+  
+    .content {
+      align-content: center;
+      justify-content: center;
+    }
+
+  }
