@@ -72,6 +72,8 @@ h2, h3 {
 #capy {
     border: 4px lavenderblush;
     border-style: solid;
+    margin-top: 20px;
+    margin-left: 70px;
 
 }
 #allContent {
@@ -83,4 +85,29 @@ h2, h3 {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+/* portfolio styles */
+.content h1 {
+    color: black;
+}
+
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: #eee;
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: #454545;
 }
