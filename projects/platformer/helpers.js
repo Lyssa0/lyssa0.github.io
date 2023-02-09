@@ -362,7 +362,7 @@ function deathOfPlayer() {
   );
   if (keyPress.any) {
     keyPress.any = false;
-    resetVariables();
+    window.location.reload()
   }
 }
 
