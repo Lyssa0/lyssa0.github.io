@@ -348,14 +348,14 @@ function deathOfPlayer() {
   ctx.fillStyle = "black";
   ctx.font = "800% serif";
   ctx.fillText(
-    "You are dead",
+    "You were hit by a deadly berry :(",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 5,
     (canvas.width / 16) * 14
   );
   ctx.font = "500% serif";
   ctx.fillText(
-    "Hit any key to restart",
+    "Hit any key to try again!",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 3,
     (canvas.width / 16) * 14
@@ -461,6 +461,13 @@ function drawCollectables() {
         collectableHeight
       );
       ctx.globalAlpha = 1;
+      alert("Yay! You did it!!");
+      alert("hit any key to play again");
+      if (keyPress.any) {
+        keyPress.any = false;
+        window.location.reload()
+      }
+    
     }
 
     //gravity

@@ -3,6 +3,7 @@ $(function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   window.addEventListener("load", loadJson);
+ alert("Hallebot lost all of her berries and fell down a cliff! Help her collect them again!");
 
   function setup() {
     if (firstTimeSetup) {
@@ -86,30 +87,15 @@ $(function () {
    createPlatform(400, 10, 5, 400);
 
    //trees!!
-  //  createPlatform(500, 565, 10, 650);
-  //  createPlatform(470, 600, 70, 10);
-  //  createPlatform(450, 650, 110, 10);
-  //  createPlatform(430, 700, 150, 10);
   for (var i = 0; i < 4; i++){
     createPlatform(500 + (350 * i), 565 - (35 * i), 10, 650 + (70 * i));
+    createPlatform(480 + (350 * i), 575 - (35 * i), 50, 10);
     createPlatform(470 + (350 * i), 600 - (35 * i), 70, 10);
     createPlatform(460 + (350 * i), 625 - (35 * i), 90, 10);
     createPlatform(450 + (350 * i), 650 - (35 * i), 110, 10);
     createPlatform(440 + (350 * i), 675 - (35 * i), 130, 10);
     createPlatform(430 + (350 * i), 700 - (35 * i), 150, 10);
   }
-  // for (var i = 0; i<4; i++){
-  //   createPlatform(470, 600, 70, 10);
-  //   createPlatform(450, 650, 110, 10);
-  //   createPlatform(430, 700, 150, 10);
-  // }
-   
-
-  //  createPlatform(800, 600, 10, 600);
-  //  createPlatform(750, 650, 110, 10);
-  //  createPlatform(730, 700, 150, 10);
-   
-   
     //dimensions: 1400 x 750
 
     // TODO 2
@@ -117,7 +103,9 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-    createCollectable("max", 90, 300, 0, .5)
+    for (var i = 0; i < 1000; i++){
+      createCollectable("berries", 1300, 00, 0, 1);
+    }
 
 
     
@@ -130,10 +118,8 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay)
     createCannon("top", 100, 2000)
-
-
-
-
+    createCannon("bottom", 650, 700)
+    createCannon("bottom", 950, 700)
 
 
     /////////////////////////////////////////////////
