@@ -6,9 +6,11 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 50px;
-			background-color: teal;
+			width: 187.5px;
+			height: 225px;
+			/* background-color: rgba(215, 255, 141, 0.882); */
+			background-image: url("Tennis_ball-0.png");
+			background-size: contain;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -49,8 +51,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css('top', newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -66,6 +69,9 @@
 			var positionX = 0
 			var points = 0
 			var speed = 10
+			var positionY;
+			var speedY;
+			var boardHeight = jQuery(window).height(); 
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -74,12 +80,21 @@
 			*/
 			function update() {
 				positionX += speed
-				moveBoxTo(positionX)
+				positionY += speed
+				moveBoxTo(positionX, positionY);
 				if (positionX > boardWidth){
 					speed = - speed;
 				}
 				if (positionX < 0){
 					speed = - speed;
+
+				}
+				if (positionY > boardWidth){
+					speed = - speed;
+				}
+				if (positionY < 0){
+					speed = - speed;
+					box.css("transform", 'rotateY(180deg)')
 				}
 			};
 
@@ -90,6 +105,7 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
+			
 				points += 1;
 				changeBoxText(points);
 				if (speed > 0){

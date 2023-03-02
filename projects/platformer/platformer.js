@@ -104,11 +104,11 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
     for (var i = 0; i < 1000; i++){
-      createCollectable("berries", 1300, 00, 0, 1);
+      createCollectable("berries", 100, 300, 0, 1);
     }
-
-
-    
+    for (var i = 0; i < 1000; i++){
+      createCollectable("blueberry", 1300, 00, 0, 1);
+    }
     
     
     
