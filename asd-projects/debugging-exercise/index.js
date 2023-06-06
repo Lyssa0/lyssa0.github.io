@@ -50,7 +50,7 @@ function makeCircle(id){
     circle.x = Math.random() * maxX + circleRadius;
     circle.y = Math.random() * maxY + circleRadius;
     circle.speedX = decideSpeed();
-    circle.speedY = desideSpeed();
+    circle.speedY = decideSpeed();
     
     return circle;
 }
@@ -89,7 +89,7 @@ function update(){
     // to make seeing issues in the debugger slightly easier (in practice, you should use
     // circles.length, but do NOT change it here)
     for (var i = 0; i < maxCircles; i++){
-        var circle = circles[j];
+        var circle = circles[i];
 
         // move the circle
         moveCircle(circle);
