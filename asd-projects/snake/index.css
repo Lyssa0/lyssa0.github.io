@@ -42,5 +42,7 @@ color: aliceblue;
 .apple {
   background-color: rgb(251, 15, 15);
   background-image: url(apple.jpeg);
+  width: auto;
+  height: auto;
   z-index: 1;
 }
