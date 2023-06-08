@@ -28,7 +28,8 @@ color: aliceblue;
 }
 
 .snake {
-  background-color: green;
+  /* background-color: green; */
+  background-image: url(worm.jpeg);
   z-index: 2;
 }
 
@@ -37,6 +38,6 @@ color: aliceblue;
 }
 
 .apple {
-  background-color: red;
+  background-image: url(apple.jpeg);
   z-index: 1;
 }

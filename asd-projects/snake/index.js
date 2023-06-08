@@ -87,19 +87,19 @@ function moveSnake() {
   column/row properties. 
   
   */
-//   for ( var i = snake.body.length - 1; i < 1; i-- ) {
-//     var snakeSquare = snake.body[i];
+  for ( var i = snake.body.length - 1; i >= 1; i-- ) {
+    var snakeSquare = snake.body[i];
     
-//     var nextSnakeSquare = snake.body[i--];
-//     var nextRow = nextSnakeSquare.row;
-//     var nextColumn = nextSnakeSquare.column;
-//     var nextDirection = nextSnakeSquare.direction;
+    var nextSnakeSquare = snake.body[i - 1];
+    var nextRow = nextSnakeSquare.row;
+    var nextColumn = nextSnakeSquare.column;
+    var nextDirection = nextSnakeSquare.direction;
     
-//     snakeSquare.direction = nextDirection;
-//     snakeSquare.row = nextRow;
-//     snakeSquare.column = nextColumn;
-//     repositionSquare(snakeSquare);
-// }
+    snakeSquare.direction = nextDirection;
+    snakeSquare.row = nextRow;
+    snakeSquare.column = nextColumn;
+    repositionSquare(snakeSquare);
+}
    
   //Before moving the head, check for a new direction from the keyboard input
  checkForNewDirection();
@@ -217,7 +217,8 @@ function hasCollidedWithSnake() {
   head and each part of the snake's body also knows its own row and column.
   
   */
-  
+ for (i = 1; i < snake.body.length; i++)
+  if(snake.body[0].row === snake.body[i].row && snake.body[0].column === snake.body[i].column){return true;}
   return false;
 }
 
@@ -333,13 +334,21 @@ function getRandomAvailablePosition() {
   while (!spaceIsAvailable) {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * 21) + 6;
-    spaceIsAvailable = true;
+    for (i = 0; i > snake.body.length; i++){
+      if(randomPosition.column === snake.body[i].column && randomPosition.row === snake.body[i].row){
+        spaceIsAvailable = false;
+      }else{
+        spaceIsAvailable = true;
+      }
+    }
+    
     
     /*
     TODO 13: After generating the random position determine if that position is
     not occupied by a snakeSquare in the snake's body. If it is then set 
     spaceIsAvailable to false so that a new position is generated.
     */
+
   }
   
   return randomPosition;
