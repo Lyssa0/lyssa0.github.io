@@ -29,7 +29,8 @@ color: aliceblue;
 
 .snake {
   /* background-color: green; */
-  background-image: url(worm.jpeg);
+  /* background-image: url(worm.jpeg); */
+  background-color: rgb(244, 192, 222);
   z-index: 2;
 }
 
