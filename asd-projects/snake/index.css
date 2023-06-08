@@ -28,17 +28,18 @@ color: aliceblue;
 }
 
 .snake {
-  background-color: green;
-  /* background-image: url(worm.jpeg); */
+  /* background-color: green; */
+  background-image: url(worm.jpeg);
   z-index: 2;
 }
 
 #snake-head {
-  background-color: darkgreen;
+  /* background-color: darkgreen; */
+  background-color: rgb(192, 148, 152);
 }
 
 .apple {
   background-color: rgb(251, 15, 15);
-  /* background-image: url(apple.jpeg); */
+  background-image: url(apple.jpeg);
   z-index: 1;
 }
