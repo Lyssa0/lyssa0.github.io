@@ -1,16 +1,21 @@
 
 body {
-  background-color: darkgreen;
+  background-color: rgb(183, 224, 183);
+  font-family: fantasy;
+}
+
+#top {
+color: aliceblue;
 }
 
 #board {
   width: 440px;
   height: 440px;
   border: 1px solid white;
-  background-color: black;
+  background-image: url(dirt.jpeg);
 }
 
-#score, #highScore {
+#score, #highScore, #welcome {
   color: white;
 }
 
