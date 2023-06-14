@@ -27,7 +27,7 @@ var KEY = {
 
 // interval variable required for stopping the update function when the game ends
 var updateInterval;
-
+var updateColor;
 // variable to keep track of the key (keycode) last pressed by the user
 var activeKey;
 
@@ -54,12 +54,22 @@ function init() {
 
   // start update interval
   updateInterval = setInterval(update, 100);
+  updateColor = setInterval(colorChange, 200);
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// PROGRAM FUNCTIONS ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+function colorChange(){
+  // $("body").on("click", random);
+random();
+function random(){
+  $("body").css("background-color", `rgb(${rand()}, ${rand()}, ${rand()})`);
+}
 
+function rand(){
+  return Math.floor(Math.random() * 256);
+}
+}
 /* 
  * On each update tick update each bubble's position and check for
  * collisions with the walls.
@@ -74,6 +84,15 @@ function update() {
   if (hasCollidedWithApple()) {
     handleAppleCollision();
   }
+  // $("body").on("click", random);
+// random()
+// function random(){
+//   $("body").css("background-color", `rgb(${rand()}, ${rand()}, ${rand()})`);
+// }
+
+// function rand(){
+//   return Math.floor(Math.random() * 256);
+// }
   
 }
 
@@ -241,9 +260,11 @@ function hasHitWall() {
   return false;
 }
 
+
 function endGame() {
   // stop update function from running
   clearInterval(updateInterval);
+  clearInterval(updateColor);
 
   // clear board of all elements
   board.empty();
@@ -254,8 +275,8 @@ function endGame() {
   score = 0;
 
   // restart the game after 500 ms
-  setTimeout(init, 500);
-
+  
+  
 
 }
 
@@ -379,7 +400,28 @@ function calculateHighScore() {
     sessionStorage.setItem("highScore", score);
     highScore = score;
     alert("New High Score!");
+    prize();
+  }else{
+    setTimeout(init, 500);
   }
-  
+
   return highScore;
 }
+
+function prize(){
+
+  if (highscore >= 1){
+    alert("Congrats! You've earned a new worm skin!");
+    $("<div>").attr("id", "purpleskin")
+              .appendTo("body");
+    $("<p>").text("Purple Worm")
+            .appendTo("#purpleskin");
+
+    // $("#purpleskin").on("click", clicked);
+
+  }
+}
+// function clicked(){
+//   $("#purpleskin").remove();
+//   init();
+// }
