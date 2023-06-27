@@ -408,19 +408,19 @@ function calculateHighScore() {
   return highScore;
 }
 
-function prize(){
+// function prize(){
 
-  if (highscore >= 1){
-    alert("Congrats! You've earned a new worm skin!");
-    $("<div>").attr("id", "purpleskin")
-              .appendTo("body");
-    $("<p>").text("Purple Worm")
-            .appendTo("#purpleskin");
+//   if (highscore >= 1){
+//     alert("Congrats! You've earned a new worm skin!");
+//     $("<div>").attr("id", "purpleskin")
+//               .appendTo("body");
+//     $("<p>").text("Purple Worm")
+//             .appendTo("#purpleskin");
 
-    // $("#purpleskin").on("click", clicked);
+//     // $("#purpleskin").on("click", clicked);
 
-  }
-}
+//   }
+// }
 // function clicked(){
 //   $("#purpleskin").remove();
 //   init();
