@@ -1,21 +1,66 @@
 
 body {
-  background-color: darkgreen;
+  background-color: lavender;
 }
 
 #board {
   width: 440px;
   height: 440px;
   border: 1px solid white;
-  background-color: black;
+  background-color: rgb(208, 193, 255);
   position: relative;
 }
 
-#gameItem {
-  background-color: teal;
-  width: 50px;
-  height: 50px;
+#paddle1 {
+  background-color: rgb(159, 197, 210);
+  width: 20px;
+  height: 100px;
   position: absolute;
-/*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
+  /* left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+}
+#paddle2 {
+  background-color: rgb(159, 197, 210);
+  width: 20px;
+  height: 100px;
+  position: absolute;
+  left: 420px;
+  /* left: 100px; */  /* Uncomment if you want to set a "starting" position */
+/*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+}
+
+#ball {
+  background-color: white;
+border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 200px;
+  /* left: 100px; */  /* Uncomment if you want to set a "starting" position */
+/*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+}
+
+#score1 {
+  background-color: aliceblue;
+  width: 150px;
+  height: 50px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: lightblue;
+  position: absolute;
+  top: 500px;
+  font-family: Chalkduster, fantasy;
+  }
+
+#score2 {
+background-color: aliceblue;
+width: 150px;
+height: 50px;
+border-width: 5px;
+border-style: solid;
+border-color: lightblue;
+position: absolute;
+left: 290px;
+top: 500px;
+font-family: Chalkduster, fantasy;
 }
