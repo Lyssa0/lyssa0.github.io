@@ -264,20 +264,17 @@ function hasHitWall() {
 function endGame() {
   // stop update function from running
   clearInterval(updateInterval);
-  clearInterval(updateColor);
 
   // clear board of all elements
   board.empty();
-  
+
   // update the highScoreElement to display the highScore
   highScoreElement.text("High Score: " + calculateHighScore());
   scoreElement.text("Score: 0");
   score = 0;
 
   // restart the game after 500 ms
-  
-  
-
+  setTimeout(init, 500);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -400,9 +397,6 @@ function calculateHighScore() {
     sessionStorage.setItem("highScore", score);
     highScore = score;
     alert("New High Score!");
-    prize();
-  }else{
-    setTimeout(init, 500);
   }
 
   return highScore;
