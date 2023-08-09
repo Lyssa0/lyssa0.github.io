@@ -15,7 +15,7 @@ color: aliceblue;
   background-image: url(dirt.jpeg);
 }
 
-#score, #highScore, #welcome {
+#score, #highScore, #welcome, #instructions {
   color: white;
 }
 
